@@ -11,4 +11,6 @@ class Square:
     Methods:
     None
     """
+    def __init__(self):
+        pass
     pass

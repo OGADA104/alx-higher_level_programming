@@ -7,9 +7,7 @@ class Square:
     without any specific attributes or methods.
 
     Attributes:
-        None
-    Methods:
-        __init__(self, size): Constructor method to initialize a square object.
+        __size (int): The size (side length) of the square.
     """
     def __init__(self, size):
         """
@@ -18,5 +16,4 @@ class Square:
         Args:
             size (int): The size (side length) of the square.
         """
-        pass
-    pass
+        self.__size = size

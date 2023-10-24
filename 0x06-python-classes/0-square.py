@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-class Square:
-    """
-    This is an empty class that defines a square.
-    The `Square` class serves as a placeholder for square objects.
-    It is currently empty,
-    without any specific attributes or methods.
 
-    Attributes:
-        None
-    Methods:
-        None
-    """
+"""Define a class Square."""
+
+class Square:
+    """Represent a square."""
+
     def __init__(self):
         pass
     pass

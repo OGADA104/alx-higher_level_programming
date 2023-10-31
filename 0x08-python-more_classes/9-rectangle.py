@@ -117,5 +117,6 @@ class Rectangle:
         """
         a class method to create a square
         """
-        new_rect = cls(size, size)
-        return new_rect
+        if size > 0:
+            new_rect = cls(size, size)
+            return new_rect

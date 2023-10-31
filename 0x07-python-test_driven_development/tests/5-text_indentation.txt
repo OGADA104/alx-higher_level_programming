@@ -1,0 +1,25 @@
+# my test file for 'text_indentation'
+
+# test 1
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+#test 2
+
+>>> text_indentation("my lost     m   .    ,nh    yt  . /   uy  btr")
+my
+
+lost     m   .
+
+   ,nh    yt  .
+
+/   uy  btr
+
+# text 2
+
+>>> text_indentation("3.142, my list of 458.098 yhgfr idhfee ...")
+3.142,
+<BLANKLINE>
+my list of 458.098
+<BLANKLINE>
+yhgfr idhfee ...

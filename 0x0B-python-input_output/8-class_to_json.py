@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+MyClass = __import__('8-my_class').MyClass
+MyClass = __import__('8-my_class_2').MyClass
 """class to json module"""
+
 
 
 def class_to_json(obj):
@@ -10,11 +13,3 @@ def class_to_json(obj):
         if isinstance(value, (list, dict, str, int, bool)):
             result[key] = value
     return result
-
-class MyClass:
-    def __init__(self, name):
-        self.name = name
-        self.number = 0
-
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)

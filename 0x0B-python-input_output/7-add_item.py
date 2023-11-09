@@ -12,4 +12,4 @@ try:
 except FileNotFoundError:
     data = []
 data.extend(sys.argv[1:])
-save_to_json_file(file_name, data)
+save_to_json_file(data, file_name)

@@ -4,22 +4,12 @@
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 >>> bg.integer_validator("width", dde)
-Traceback (most recent call last):
-  ...
-NameError: name 'dde' is not defined
->>> bg.integer_validator("width", 9)
->>> bg.integer_validator("width", u)
-Traceback (most recent call last):
-  ...
-NameError: name 'u' is not defined
->>> bg.integer_validator("distance", -4)
+>>> try:
+...     bg.integer_validator("distance", -4)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
-[ValueError] distance must be greater than dth", u)
-Traceback (most recent call last):
-  ...
-NameError: name 'u' is not defined
+[ValueError] distance must be greater than 0
 >>> try:
 ...     bg.integer_validator("name", "John")
 ... except Exception as e:
@@ -32,5 +22,3 @@ NameError: name 'u' is not defined
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
 [ValueError] age must be greater than 0
->>> try:
-...     bg.integ(

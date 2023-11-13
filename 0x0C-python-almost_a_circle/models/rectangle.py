@@ -65,7 +65,34 @@ class Rectangle(Base):
         if name in ("x", "y") and value < 0:
             raise ValueError("{} must be >= 0".format(name))
 
-    def __str__():
+    def __str__(self):
         """format printing"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
+
+    def area(self):
+        """get area of rectangle"""
+        return self.__width * self.__height
+
+    def display(self):
+        """displat the rectangle"""
+        for y in range(self.__y):
+            print()
+
+        for i in range(self.__height):
+            for x in range(self.__y):
+                print(" ", end='')
+            for j in range(self.__width):
+                print("#", end='')
+            print()
+
+    def update(self, *args, **kwargs):
+        """update attributes"""
+        attributes = ["id", "width", "height", "x", "y"]
+        if args:
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)

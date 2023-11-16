@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""first rectangle module
-
 """
+    first rectangle module
+"""
+
+
 from models.base import Base
 
 

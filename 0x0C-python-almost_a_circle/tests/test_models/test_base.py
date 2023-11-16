@@ -8,10 +8,10 @@ class TestBase(unittest.TestCase):
 
     def setUp(self):
         """setup tests"""
-
-        self.b1 = Base()
+        Base._Base__nb_object = 0
+        self.b1 = Base(1)
         self.b2 = Base(99)
-        self.b3 = Base()
+        self.b3 = Base(2)
         self.b4 = Base(-123)
 
     def test_Id(self):

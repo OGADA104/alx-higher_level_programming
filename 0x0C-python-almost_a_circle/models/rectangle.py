@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""first rectangle module"""
+"""first rectangle module
+
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
     """class rectangle created"""
+    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height

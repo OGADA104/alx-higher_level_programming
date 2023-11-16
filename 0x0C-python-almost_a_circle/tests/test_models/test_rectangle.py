@@ -2,6 +2,7 @@
 """ test module for class rectangle"""
 
 import unittest
+from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -10,6 +11,7 @@ class testRectangle(unittest.TestCase):
 
     def setUp(self):
         """set up r1 and r2"""
+        Base._Base__nb_objects = 0
         self.r1 = Rectangle(10, 2)
         self.r2 = Rectangle(2, 10)
         self.r3 = Rectangle(10, 2, 0, 0, 12)

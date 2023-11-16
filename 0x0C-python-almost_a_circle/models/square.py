@@ -71,8 +71,7 @@ class Square(Rectangle):
         """save do dict"""
         sq_dict = {
             "id": self.id,
-            "width": self.width,
-            "height": self.height,
+            "size": self.width,
             "x": self.x,
             "y": self.y,
         }

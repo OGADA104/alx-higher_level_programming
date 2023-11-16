@@ -2,10 +2,12 @@
 """
 This module defines the Square class, a special type of rectangle.
 
-The Square class is defined as a subclass of the Rectangle class from the models.rectangle module.
+The Square class is defined as a subclass of the Rectangle class from
+the models.rectangle module.
 """
 
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """
@@ -34,4 +36,9 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(
+                self.id,
+                self.x,
+                self.y,
+                self.width
+                )

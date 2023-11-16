@@ -55,3 +55,14 @@ class Square(Rectangle):
         self.height = value
         Rectangle.integer_validator(self, "width", value)
         Rectangle.integer_validator(self, "height", value)
+
+    def update(self, *args, **kwargs):
+        """update attributes"""
+        attributes = ["id", "size", "x", "y"]
+        if args:
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)

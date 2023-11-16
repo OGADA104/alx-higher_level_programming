@@ -42,3 +42,16 @@ class Square(Rectangle):
                 self.y,
                 self.width
                 )
+
+    @property
+    def size(self):
+        """get size if width and height are equal"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """set size """
+        self.width = value
+        self.height = value
+        Rectangle.integer_validator(self, "width", value)
+        Rectangle.integer_validator(self, "height", value)

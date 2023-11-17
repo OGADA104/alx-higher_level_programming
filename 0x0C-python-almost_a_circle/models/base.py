@@ -23,5 +23,5 @@ class Base:
         if list_dictionaries is not None:
             data_json = json.dumps(list_dictionaries)
         else:
-            data_json = "[]"
+            data_json = json.dumps("[]")
         return data_json

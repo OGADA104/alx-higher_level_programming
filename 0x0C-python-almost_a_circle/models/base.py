@@ -37,5 +37,8 @@ class Base:
 
     def from_json_string(json_string):
         """from string to dict"""
-        json_dict = json.loads(json_string)
+        if json_string is not None:
+            json_dict = json.loads(json_string)
+        else:
+            json_dict = {}
         return json_dict

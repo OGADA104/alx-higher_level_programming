@@ -34,3 +34,8 @@ class Base:
         with open(filename, 'w') as file:
             file.write(cls.to_json_string(
                 [obj.to_dictionary() for obj in list_objs]))
+
+    def from_json_string(json_string):
+        """from string to dict"""
+        json_dict = json.loads(json_string)
+        return json_dict

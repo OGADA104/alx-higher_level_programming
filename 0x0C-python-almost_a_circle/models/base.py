@@ -40,7 +40,7 @@ class Base:
         if json_string is not None:
             json_dict = json.loads(json_string)
         else:
-            json_dict = {}
+            json_dict = []
         return json_dict
 
     @classmethod
@@ -55,3 +55,11 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ load from file"""
+        file = "{}.json".format(cls.__name__)
+        with open(file, 'r') as loader:
+            data = json.load(loader)
+        return data

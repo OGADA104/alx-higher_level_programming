@@ -60,7 +60,10 @@ class Base:
     def load_from_file(cls):
         """ load from file"""
         file = "{}.json".format(cls.__name__)
-        with open(file, 'r') as loader:
-            data = cls.from_json_string(loader.read())
-            instances = [cls.create(**item) for item in data]
-        return instances
+        try:
+            with open(file, 'r') as loader:
+                data = cls.from_json_string(loader.read())
+                instances = [cls.create(**item) for item in data]
+            return instances
+        except FileNotFoundError:
+            return []

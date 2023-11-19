@@ -42,3 +42,16 @@ class Base:
         else:
             json_dict = {}
         return json_dict
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Create an instance with attributes set from dictionary."""
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            dummy = cls(1)
+        else:
+            raise ValueError("Unsupported class: {}".format(cls.__name__))
+
+        dummy.update(**dictionary)
+        return dummy

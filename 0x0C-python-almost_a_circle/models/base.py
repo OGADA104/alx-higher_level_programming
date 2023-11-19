@@ -61,5 +61,6 @@ class Base:
         """ load from file"""
         file = "{}.json".format(cls.__name__)
         with open(file, 'r') as loader:
-            data = json.load(loader)
-        return data
+            data = cls.from_json_string(loader.read())
+            instances = [cls.create(**item) for item in data]
+        return instances

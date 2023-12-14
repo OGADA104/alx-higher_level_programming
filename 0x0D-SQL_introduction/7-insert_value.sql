@@ -1,2 +1,2 @@
 -- insert int table
-INSERT INTO first_table (id, name) VALUES (89, 'Best Shool');
+INSERT INTO first_table (id, name) VALUES (89, 'Best School');

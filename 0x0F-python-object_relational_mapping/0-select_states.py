@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 import MySQLdb
-
+""" a script to connect to a db"""
 if __name__ == "__main__":
     args = sys.argv
     mysql_username = args[1]

@@ -12,9 +12,10 @@ def select_states(mysql_username, mysql_password, database_name):
                 port=3306,
                 user=mysql_username,
                 passwd=mysql_password,
-                db=database_name)
+                db=database_name,
+                charset="utf8")
         cur = db.cursor()
-        cur.execute("SELECT * FROM states ORDER BY id")
+        cur.execute("SELECT * FROM states ORDER BY states.id ASC")
         states = cur.fetchall()
         return states
     except MySQLdb.Error as e:

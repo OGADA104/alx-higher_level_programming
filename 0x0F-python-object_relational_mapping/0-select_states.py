@@ -15,7 +15,7 @@ if __name__ == "__main__":
             passwd=mysql_password,
             db=database_name)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     states = cur.fetchall()
     for state in states:
         print(state)

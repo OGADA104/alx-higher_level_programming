@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+"""print states from db"""
+
 
 def select_states(mysql_username, mysql_password, database_name):
+    """select states function"""
     try:
         db = MySQLdb.connect(
                 host='localhost',
@@ -23,7 +26,9 @@ def select_states(mysql_username, mysql_password, database_name):
         if 'db' in locals():
             db.close()
 
+
 if __name__ == "__main__":
+    """run if main script"""
     args = sys.argv
     mysql_username = args[1]
     mysql_password = args[2]

@@ -10,7 +10,7 @@ if __name__ == '__main__':
     engine = create_engine(db_url)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    query = select(State.id.label('id'), State.name.label('name'))
+    query = select(State.id.label('id'), State.name.label('name')).order_by(State.id)
     result = session.execute(query).fetchall()
     for row in result:
         print(row.id, row.name)

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""define class state to db"""
 from sqlalchemy import create_engine, MetaData, Table, String, Column, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.engine.url import URL

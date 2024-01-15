@@ -5,11 +5,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.engine.url import URL
 
 Base = declarative_base()
-Mydb = {'drivername': 'mysql',
-        'username': 'root',
-        'password': 'root',
-        'host': 'localhost',
-        'port': '3306'}
 
 
 class State(Base):

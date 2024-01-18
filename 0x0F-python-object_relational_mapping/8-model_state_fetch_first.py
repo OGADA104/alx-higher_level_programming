@@ -20,8 +20,11 @@ if __name__ == '__main__':
 
     query = select(
             State.id.label('id'),
-            State.name.label('name')).order_by(State.id).limit(5)
-    result = session.execute(query).fetchall()
-    for row in result:
-        print('{}: {}'.format(row.id, row.name))
+            State.name.label('name')).order_by(State.id)
+    result = session.execute(query).first()
+    if result:
+        print('{}: {}'.format(result.id, result.name))
+    else:
+        print()
+
     session.close()

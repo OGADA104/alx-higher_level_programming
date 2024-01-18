@@ -20,5 +20,5 @@ if __name__ == '__main__':
             State.name.label('name')).order_by(State.id).limit(5)
     result = session.execute(query).fetchall()
     for row in result:
-        print(row.id, row.name)
+        print('{}: {}'.format(row.id, row.name))
     session.close()

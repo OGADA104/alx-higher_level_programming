@@ -1,2 +1,6 @@
--- list all capital cities of califonia
-SELECT id, name, (SELECT name FROM states WHERE id = cities.state_id) AS state_name FROM cities WHERE id = (SELECT id FROM states WHERE name = 'California') ORDER BY id ASC;
+-- list all cities in California using subquery
+SELECT cities.id, cities.name FROM cities
+WHERE cities.state_id = (
+    SELECT states.id FROM states
+    WHERE states.name = 'California')
+ORDER BY cities.id;

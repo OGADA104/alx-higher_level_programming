@@ -1,4 +1,3 @@
--- create root user
-CREATE USER IF NOT EXISTS user_0d_1 IDENTIFIED BY 'user_0d_1_pwd';
-GRANT  ALL PRIVILEGES ON *.* TO 'user_0d_1';
-FLUSH PRIVILEGES;
+-- create user and should not failif user exists
+CREATE USER IF NOT EXISTS 'USER_0D_1'@'localhost' IDENTIFIED BY 'password_0d_1';
+GRANT ALL PRIVILEGES ON *.* TO 'USER_0D_1'@'localhost';
